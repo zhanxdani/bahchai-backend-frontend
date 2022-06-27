@@ -1,0 +1,441 @@
+﻿{% extends  'base.html'%}
+{% load static %}
+
+{% block content %}
+<body>
+<div id="preloader"></div>
+<div class="footer-parallax-container">
+    <header class="fixed-top bg-transparent menu-transparent scroll-change wide-area dark-design"
+            data-menu-anima="fade-in">
+        <div class="navbar navbar-default mega-menu-fullwidth navbar-fixed-top" role="navigation">
+            <div class="navbar navbar-main">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <a class="navbar-brand" href="{% url 'index_list' %}">
+                            <img class="logo-default scroll-hide" src="{% static 'images/logo.png'%}" alt="logo"/>
+                            <img class="logo-default scroll-show" src="{% static 'images/logo.png'%}" alt="logo"/>
+                            <img class="logo-retina" src="{% static 'images/logo-retina.png'%}" alt="logo"/>
+                        </a>
+                    </div>
+                    <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown active">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="{% url 'index_list' %}">Главная
+                                    <span class="caret"></span></a>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="{% url 'products' %}">Наше меню
+                                    <span class="caret"></span></a>
+                                <div class="mega-menu dropdown-menu multi-level row bg-menu">
+                                    <div class="col">
+                                        <ul class="fa-ul no-icons text-s">
+                                            <li><a href="{% url 'products' %}#Завтраки">Завтраки</a></li>
+                                            <li><a href="{% url 'products' %}#Закуски">Закуски</a></li>
+                                            <li><a href="{% url 'products' %}#Салаты">Салаты</a></li>
+                                            <li><a href="{% url 'products' %}#Первое-блюдо">Первое блюдо</a></li>
+                                            <li><a href="{% url 'products' %}#Второе-блюдо">Второе блюдо</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col">
+                                        <ul class="fa-ul no-icons text-s">
+                                            <li><a href="{% url 'products' %}#Шашлыки">Шашлыки</a></li>
+                                            <li><a href="{% url 'products' %}#Стейки">Стейки</a></li>
+                                            <li><a href="{% url 'products' %}#Пицца">Пицца</a></li>
+                                            <li><a href="{% url 'products' %}#Блюда-на-заказ">Блюда на заказ</a></li>
+                                            <li><a href="{% url 'products' %}#Гарниры">Гарниры</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col">
+                                        <ul class="fa-ul no-icons text-s">
+                                            <li><a href="{% url 'products' %}#Соусы">Соусы</a></li>
+                                            <li><a href="{% url 'products' %}#Пиво-на-разлив">Пиво на разлив</a></li>
+                                            <li><a href="{% url 'products' %}#Прохладные-напитки">Прохладные напитки</a>
+                                            </li>
+                                            <li><a href="{% url 'products' %}#Алкогольные-напитки">Алкогольные
+                                                напитки</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <a href="{% url 'careers' %}" class="dropdown-toggle" data-toggle="dropdown"
+                                   role="button">Контакты <span class="caret"></span></a>
+                            </li>
+                            <li class="dropdown">
+
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">О нас <span
+                                        class="caret"></span></a>
+                                <ul class="dropdown-menu multi-level">
+                                    <li><a href="{% url 'list' %}">Доставка</a></li>
+                                    <li><a href="reservation-2.html">Бронь и время работы</a></li>
+                                    <li><a href="{% url 'about' %}">Важное и отзывы</a></li>
+                                    <li><a href="{% url 'map' %}">Как нас найти?</a></li>
+                                    <li><a href="faq.html">Вопросы и ответы</a></li>
+                                </ul>
+
+                            </li>
+                        </ul>
+                        <div class="nav navbar-nav navbar-right">
+                            <div class="shop-menu-cnt">
+                                <i class="fa fa-shopping-cart"><span class="cart-count">1</span></i>
+                                <div class="shop-menu">
+                                    <ul class="shop-cart">
+                                        <li class="cart-item">
+                                            <img src="{% static 'images/gallery/pizza-1.jpg'%}" alt="">
+                                            <div class="cart-content">
+                                                <h5>Вкусный хавчик</h5>
+                                                <span class="cart-quantity">
+                                                        1 x 299.00 Сом
+                                                    </span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <p class="cart-total">
+                                        Итого: <span>299.00 Сом</span>
+                                    </p>
+                                    <p class="cart-buttons">
+                                        <a href="{% url 'cart_page' %}" class="btn btn-xs cart-view">Просмотреть корзину</a>
+                                        <a href="#" class="btn btn-xs cart-checkout">Позвонить</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="search-box-menu">
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <div class="section-bg-image parallax-window text-center white ken-burn-center" data-natural-height="1080"
+         data-natural-width="1920" data-parallax="scroll" data-image-src="{% static 'images/hd-2.jpg'%}">
+        <div class="container content">
+            <hr class="space"/>
+            <h1 class="text-xl text-bold" data-anima="pulse">БАХЧАЙ</h1>
+            <p class="font-2">
+                ________________________
+            </p>
+            <p class="font-2">
+                Шашлычная и Ресто
+            </p>
+            <hr class="space"/>
+
+            <div class="flexslider carousel outer-navs visible-dir-nav white" data-options="minWidth:200,itemMargin:30,numItems:3,controlNav:false,directionNav:true">
+                    <ul class="slides">
+                        <li>
+                            <div class="img-box adv-img adv-img-half-content shadow-1" data-anima="fade-left" data-trigger="hover">
+                                <i class="fa fa-camera-retro anima"></i>
+                                <a href="#" class="img-box lightbox anima-scale-up anima">
+                                    <img src="{% static 'images/gallery/long-9.jpg'%}" alt="" />
+                                </a>
+                                <div class="caption">
+                                    <h2>Название блюда</h2>
+                                    <span class="extra-content">111 сом</span>
+                                    <p>Еда, хавчик, фрукты, овощи, соль, перец, ложка, ножка, рокнролл</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img-box adv-img adv-img-half-content shadow-1" data-anima="fade-left" data-trigger="hover">
+                                <i class="fa fa-camera-retro anima"></i>
+                                <a href="#" class="img-box lightbox anima-scale-up anima">
+                                    <img src="{% static 'images/gallery/long-10.jpg'%}" alt="" />
+                                </a>
+                                <div class="caption">
+                                    <h2>Название блюда</h2>
+                                    <span class="extra-content">111 сом</span>
+                                    <p>Еда, хавчик, фрукты, овощи, соль, перец, ложка, ножка, рокнролл.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img-box adv-img adv-img-half-content shadow-1" data-anima="fade-left" data-trigger="hover">
+                                <i class="fa fa-camera-retro anima"></i>
+                                <a href="#" class="img-box lightbox anima-scale-up anima">
+                                    <img src="{% static 'images/gallery/long-11.jpg'%}" alt="" />
+                                </a>
+                                <div class="caption">
+                                    <h2>Название блюда</h2>
+                                    <span class="extra-content">111 сом</span>
+                                    <p>Еда, хавчик, фрукты, овощи, соль, перец, ложка, ножка, рокнролл.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img-box adv-img adv-img-half-content" data-anima="fade-left" data-trigger="hover">
+                                <i class="fa fa-camera-retro anima"></i>
+                                <a href="#" class="img-box lightbox anima-scale-up anima">
+                                    <img src="{% static 'images/gallery/long-12.jpg'%}" alt="" />
+                                </a>
+                                <div class="caption">
+                                    <h2>Название блюда</h2>
+                                    <span class="extra-content">111 сом</span>
+                                    <p>Еда, хавчик, фрукты, овощи, соль, перец, ложка, ножка, рокнролл.</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="section-bg-image white" style="background-image:url({% static 'images/hd-portrait.jpg'%})">
+            <div class="container content">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="title-base text-left">
+                            <hr />
+                            <h2>Новый хавчик</h2>
+                            <p>Что-то написать интересное</p>
+                        </div>
+                    </div>
+
+                </div>
+                <hr class="space l" />
+                <div class="flexslider carousel outer-navs" data-options="minWidth:200,itemMargin:15,numItems:4,controlNav:false,directionNav:true">
+                    <ul class="slides">
+                        <li>
+                            <div class="img-box adv-img adv-img-half-content" data-anima="fade-left" data-trigger="hover">
+                                <i class="fa fa-camera-retro anima"></i>
+                                <a href="#" class="img-box lightbox anima-scale-up anima">
+                                    <img src="{% static 'images/gallery/long-13.jpg'%}" alt="" />
+                                </a>
+                                <div class="caption">
+                                    <h2>Название блюда</h2>
+                                    <span class="extra-content">111 сом</span>
+                                    <p>Еда, хавчик, фрукты, овощи, соль, перец, ложка, ножка, рокнролл.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img-box adv-img adv-img-half-content" data-anima="fade-left" data-trigger="hover">
+                                <i class="fa fa-camera-retro anima"></i>
+                                <a href="#" class="img-box lightbox anima-scale-up anima">
+                                    <img src="{% static 'images/gallery/long-14.jpg'%}" alt="" />
+                                </a>
+                                <div class="caption">
+                                    <h2>Название блюда</h2>
+                                    <span class="extra-content">111 сом.</span>
+                                    <p>Еда, хавчик, фрукты, овощи, соль, перец, ложка, ножка, рокнролл.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img-box adv-img adv-img-half-content" data-anima="fade-left" data-trigger="hover">
+                                <i class="fa fa-camera-retro anima"></i>
+                                <a href="#" class="img-box lightbox anima-scale-up anima">
+                                    <img src="{% static 'images/gallery/long-15.jpg'%}" alt="" />
+                                </a>
+                                <div class="caption">
+                                    <h2>Название блюда</h2>
+                                    <span class="extra-content">111 сом.</span>
+                                    <p>Еда, хавчик, фрукты, овощи, соль, перец, ложка, ножка, рокнролл.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img-box adv-img adv-img-half-content" data-anima="fade-left" data-trigger="hover">
+                                <i class="fa fa-camera-retro anima"></i>
+                                <a href="#" class="img-box lightbox anima-scale-up anima">
+                                    <img src="{% static 'images/gallery/long-16.jpg'%}" alt="" />
+                                </a>
+                                <div class="caption">
+                                    <h2>Название блюда</h2>
+                                    <span class="extra-content">111 сом.</span>
+                                    <p>Еда, хавчик, фрукты, овощи, соль, перец, ложка, ножка, рокнролл.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img-box adv-img adv-img-half-content" data-anima="fade-left" data-trigger="hover">
+                                <i class="fa fa-camera-retro anima"></i>
+                                <a href="#" class="img-box lightbox anima-scale-up anima">
+                                    <img src="{% static 'images/gallery/long-17.jpg'%}" alt="" />
+                                </a>
+                                <div class="caption">
+                                    <h2>Название блюда</h2>
+                                    <span class="extra-content">111 сом.</span>
+                                    <p>Еда, хавчик, фрукты, овощи, соль, перец, ложка, ножка, рокнролл.</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            <hr class="space"/>
+            <div class="title-base">
+                <hr/>
+                <h2>Посмотрите на наше офигенное меню</h2>
+                <p>Самый лучший шеф готовил для вас блюдо, смотрите меню</p>
+            </div>
+            <div class="text-center"><a data-anima="pulse" href="{% url 'products' %}"
+                                        class="circle-button btn btn-sm opacity-1">Полное меню</a></div>
+            <hr class="space"/>
+
+            <div class="section-slider row-14 shadow-2 side-paddings">
+                <div class="flexslider advanced-slider slider white" data-options="animation:fade,directionNav:false">
+                    <ul class="slides">
+                        <li data-slider-anima="fade-left">
+                            <div class="section-slide">
+                                <div class="bg-cover" style="background-image:url({% static 'images/cola-bg.jpg'%})">
+                                </div>
+                                <div class="container">
+                                    <div class="container-middle">
+                                        <div class="container-inner white">
+                                            <div class="row vertical-row">
+                                                <div class="col-md-6 anima">
+                                                    <p class="text-italic">Попробуйте наши холодные напитки</p>
+                                                    <h2 class="text-black text-l text-uppercase">Холодные напитки</h2>
+                                                    <p class="text-s">
+                                                        Tincidunt integer eu augue augue nunc elit dolor, luctus
+                                                        placerat scelerisque euismod iaculis eu lacus nunc mi elite
+                                                        vehicula ut laoreet acaliquam sit amet justo nunc temporo metus
+                                                        velo.
+                                                    </p>
+                                                </div>
+                                                <div class="col-md-6 text-right text-center-sm">
+                                                    <button class="btn btn-sm btn-border anima anima-fade-right"
+                                                            type="button">Посмотреть
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <hr class="space m visible-sm"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li data-slider-anima="fade-left">
+                            <div class="section-slide">
+                                <div class="bg-cover" style="background-image:url({% static 'images/cola-bg-2.jpg'%})">
+                                </div>
+                                <div class="container">
+                                    <div class="container-middle">
+                                        <div class="container-inner white">
+                                            <div class="row vertical-row">
+                                                <div class="col-md-6 anima">
+                                                    <p class="text-italic">Попробуйте наши горячие напитки</p>
+                                                    <h2 class="text-black text-l text-uppercase">Горячие напитки</h2>
+                                                    <p class="text-s">
+                                                        Tincidunt integer eu augue augue nunc elit dolor, luctus
+                                                        placerat scelerisque euismod iaculis eu lacus nunc mi elite
+                                                        vehicula ut laoreet acaliquam sit amet justo nunc temporo metus
+                                                        velo.
+                                                    </p>
+                                                </div>
+                                                <div class="col-md-6 text-right">
+                                                    <button class="btn btn-sm btn-border anima anima-fade-right"
+                                                            type="button">Посмотреть
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <hr class="space m visible-sm"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-bg-color" style="background-image:url({% static 'images/hd-2.jpg'%})">
+        <div class="container content">
+            <div class="flexslider carousel outer-navs white"
+                 data-options="minWidth:200,itemMargin:15,numItems:2,controlNav:true,directionNav:true">
+                <ul class="slides">
+                    <li>
+                        <div class="advs-box advs-box-side-img advs-box-blog" data-anima="scale-rotate"
+                             data-trigger="hover">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <a class="img-box">
+                                        <img class="anima" src="{% static 'images/gallery/post-1.jpg'%}" alt=""/>
+                                    </a>
+                                </div>
+                                <div class="col-md-8">
+                                    <h2><a>Тортилла и что-то офигенное</a></h2>
+                                    <hr>
+                                    <div class="tag-row icon-row">
+                                        <span><i class="fa fa-calendar"></i>33.33.2022</span>
+                                        <span><i class="fa fa-bookmark"></i><a href="#">Категория</a></span>
+                                        <span><i class="fa fa-pencil"></i>Админ</span>
+                                    </div>
+                                    <p>
+                                        Lorem ipsum dolor sitamet consectetur adipisicing elited do eiusmod tempor
+                                        incididunt
+                                        ut labore et dolore magna aliqua. Utenim ad minim veniam.
+                                    </p>
+                                    <a class="btn-text" href="#">Прочитать больше</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="advs-box advs-box-side-img advs-box-blog" data-anima="scale-rotate"
+                             data-trigger="hover">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <a class="img-box">
+                                        <img class="anima" src="{% static 'images/gallery/post-2.jpg'%}" alt=""/>
+                                    </a>
+                                </div>
+                                <div class="col-md-8">
+                                    <h2><a>Капуера и что-то офигенное</a></h2>
+                                    <hr>
+                                    <div class="tag-row icon-row">
+                                        <span><i class="fa fa-calendar"></i>33.33.2022</span>
+                                        <span><i class="fa fa-bookmark"></i><a href="#">Категория</a></span>
+                                        <span><i class="fa fa-pencil"></i>Админ</span>
+                                    </div>
+                                    <p>
+                                        Lorem ipsum dolor sitamet consectetur adipisicing elited do eiusmod tempor
+                                        incididunt
+                                        ut labore et dolore magna aliqua. Utenim ad minim veniam.
+                                    </p>
+                                    <a class="btn-text" href="#">Прочитать больше</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="advs-box advs-box-side-img advs-box-blog" data-anima="scale-rotate"
+                             data-trigger="hover">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <a class="img-box">
+                                        <img class="anima" src="{% static 'images/gallery/post-3.jpg'%}" alt=""/>
+                                    </a>
+                                </div>
+                                <div class="col-md-8">
+                                    <h2><a>Шашлычок и что-то офигенное</a></h2>
+                                    <hr>
+                                    <div class="tag-row icon-row">
+                                        <span><i class="fa fa-calendar"></i>33.33.2022</span>
+                                        <span><i class="fa fa-bookmark"></i><a href="#">Категория</a></span>
+                                        <span><i class="fa fa-pencil"></i>Админ</span>
+                                    </div>
+                                    <p>
+                                        Lorem ipsum dolor sitamet consectetur adipisicing elited do eiusmod tempor
+                                        incididunt
+                                        ut labore et dolore magna aliqua. Utenim ad minim veniam.
+                                    </p>
+                                    <a class="btn-text" href="#">Прочитать больше</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+{% endblock %}

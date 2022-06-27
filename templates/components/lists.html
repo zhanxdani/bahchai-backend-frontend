@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 10]> <html  lang="en" class="iex"> <![endif]-->
+<!--[if (gt IE 10)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Бахчай - Доставка</title>
+    <meta name="description" content="Доставка Бахчай">
+    <script src="{% static 'scripts/jquery.min.js'%}"></script>
+    <link rel="stylesheet" href="{% static 'scripts/bootstrap/css/bootstrap.css'%}">
+    <script src="{% static 'scripts/script.js'%}"></script>
+    <link rel="stylesheet" href="{% static 'style.css'%}">
+    <link rel="stylesheet" href="{% static 'css/components.css'%}">
+    <link rel="stylesheet" href="{% static 'css/animations.css'%}">
+    <link rel="stylesheet" href="{% static 'scripts/php/contact-form.css'%}">
+    <link rel="icon" href="{% static 'images/favicon.png'%}">
+    <link rel="stylesheet" href="{% static 'skin.css'%}">
+</head>
+<body>
+    <div id="preloader"></div>
+   <header class="fixed-top bg-transparent menu-transparent scroll-change wide-area dark-design" data-menu-anima="fade-in">
+       <div class="navbar navbar-default mega-menu-fullwidth navbar-fixed-top" role="navigation">
+           <div class="navbar navbar-main">
+               <div class="container">
+                   <div class="navbar-header">
+                       <button type="button" class="navbar-toggle">
+                           <i class="fa fa-bars"></i>
+                       </button>
+                       <a class="navbar-brand" href="{% url 'index_list' %}">
+                           <img class="logo-default scroll-hide" src="{% static 'images/logo.png'%}" alt="logo" />
+                           <img class="logo-default scroll-show" src="{% static 'images/logo.png'%}" alt="logo" />
+                           <img class="logo-retina" src="{% static 'images/logo-retina.png'%}" alt="logo" />
+                       </a>
+                   </div>
+                   <div class="collapse navbar-collapse">
+                       <ul class="nav navbar-nav">
+                           <li class="dropdown active">
+                               <a class="dropdown-toggle" data-toggle="dropdown" href="{% url 'index_list' %}">Главная <span class="caret"></span></a>
+                           <li class="dropdown">
+                               <a class="dropdown-toggle" data-toggle="dropdown" href="{% url 'products' %}">Наше меню <span class="caret"></span></a>
+                               <div class="mega-menu dropdown-menu multi-level row bg-menu">
+                                   <div class="col">
+                                            <ul class="fa-ul no-icons text-s">
+                                                <li><a href="{% url 'products' %}#Завтраки">Завтраки</a></li>
+                                                <li><a href="{% url 'products' %}#Закуски">Закуски</a></li>
+                                                <li><a href="{% url 'products' %}#Салаты">Салаты</a></li>
+                                                <li><a href="{% url 'products' %}#Первое-блюдо">Первое блюдо</a></li>
+                                                <li><a href="{% url 'products' %}#Второе-блюдо">Второе блюдо</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col">
+                                            <ul class="fa-ul no-icons text-s">
+                                                <li><a href="{% url 'products' %}#Шашлыки">Шашлыки</a></li>
+                                                <li><a href="{% url 'products' %}#Стейки">Стейки</a></li>
+                                                <li><a href="{% url 'products' %}#Пицца">Пицца</a></li>
+                                                <li><a href="{% url 'products' %}#Блюда-на-заказ">Блюда на заказ</a></li>
+                                                <li><a href="{% url 'products' %}#Гарниры">Гарниры</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col">
+                                            <ul class="fa-ul no-icons text-s">
+                                                <li><a href="{% url 'products' %}#Соусы">Соусы</a></li>
+                                                <li><a href="{% url 'products' %}#Пиво-на-разлив">Пиво на разлив</a></li>
+                                                <li><a href="{% url 'products' %}#Прохладные-напитки">Прохладные напитки</a></li>
+                                                <li><a href="{% url 'products' %}#Алкогольные-напитки">Алкогольные напитки</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                           </li>
+                           <li class="dropdown">
+                               <a href="{% url 'careers' %}" class="dropdown-toggle" data-toggle="dropdown" role="button">Контакты <span class="caret"></span></a>
+                           </li>
+                           <li class="dropdown">
+                                   <a class="dropdown-toggle" data-toggle="dropdown" href="#">О нас <span class="caret"></span></a>
+                                   <ul class="dropdown-menu multi-level">
+                                               <li><a href="{% url 'list' %}">Доставка</a></li>
+                                               <li><a href="{% url 'about' %}">Важное и отзывы</a></li>
+                                               <li><a href="{% url 'map' %}">Как нас найти?</a></li>
+                                   </ul>
+                               </li>
+                       </ul>
+                       <div class="nav navbar-nav navbar-right">
+                           <div class="shop-menu-cnt">
+                               <i class="fa fa-shopping-cart"><span class="cart-count">1</span></i>
+                               <div class="shop-menu">
+                                   <ul class="shop-cart">
+                                       <li class="cart-item">
+                                           <img src="{% static 'images/gallery/pizza-1.jpg'%}" alt="">
+                                           <div class="cart-content">
+                                               <h5>Вкусный хавчик</h5>
+                                               <span class="cart-quantity">
+                                                   1 x 299.00 Сом
+                                               </span>
+                                           </div>
+                                       </li>
+                                   </ul>
+                                   <p class="cart-total">
+                                       Итого: <span>299.00 Сом</span>
+                                   </p>
+                                   <p class="cart-buttons">
+                                       <a href="/pages/cart.html" class="btn btn-xs cart-view">Просмотреть корзину</a>
+                                       <a href="#" class="btn btn-xs cart-checkout">Позвонить</a>
+                                   </p>
+                               </div>
+                           </div>
+                           
+                           <li class="dropdown active">
+                                 <a class="im-phone dropdown-toggle im-number" data-toggle="dropdown" href="https://wa.me/996502121121"> ПОЗВОНИТЬ! <span class="caret"></span></a>
+                             <li class="dropdown">
+                           <div class="search-box-menu">
+                               
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </header>
+    <div class="header-title white ken-burn" data-parallax="scroll" data-position="top" data-natural-height="850" data-natural-width="1920" data-image-src="{% static 'images/bg-29.jpg'%}">
+        <div class="container">
+            <div class="title-base">
+                <h1>Доставка</h1>
+                <p>В Компании «Бахчай» существуют следующие правила доставки:</p>
+            </div>
+        </div>
+    </div>
+    <div class="section-empty section-item text-center">
+        <div class="container content">
+            <h5 class="text-bold" class="text-center">Правила доставки</h5>
+            <hr class="space m" />
+            <div class="list-items text-left">
+                <div class="list-item">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <h3>• Все наши блюда готовятся только после подтверждения заказа.</h3>
+                        </div>
+                        <div class="col-md-2">
+                            <span>•</sp'../an>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <h3>• Отсчет времени заказа идет после подтверждения оператором call-centre.</h3>
+                        </div>
+                        <div class="col-md-2">
+                            <span>•</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <h3>• Мы не принимаем заказ у лиц, находящихся в состоянии явного алкогольного или наркотического опьянения.</h3>
+                        </div>
+                        <div class="col-md-2">
+                            <span>•</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <h3>• Вы можете внести изменения в заказ или отказаться от него в течении пяти минут с момента оформления заказа.</h3>
+                        </div>
+                        <div class="col-md-2">
+                            <span>•</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <h3>• Если заказ на сумму от 1500 сом, то Компания обязана получить предварительную оплату в размере 30% от стоимости заказа.</h3>
+                        </div>
+                        <div class="col-md-2">
+                            <span>•</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <h3>• Минимальный заказ - 250 сом в зоне обслуживания филиала (границы зоны обслуживания можно уточнить у оператора).</h3>
+                        </div>
+                        <div class="col-md-2">
+                            <span>•</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="space" />
+            <hr />
+            <hr class="space" />
+            <div class="title-base title-small doc-title">
+                <h4>Доставка осуществляется только внутри города</h4>
+                <i class="fa fa-angle-up scroll-top"></i>
+            </div>
+        </div>
+    </div>
+    <footer class="footer-base">
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6 footer-center">
+                    <hr class="space s" />
+                    <img width="180" src="{% static 'images/logo-2.png'%}" alt="" />
+                    <hr class="space m" />
+                    <p>
+                        Мы не беспокоимся за качество, потому-что готовит Гордон Рамзи.<br />Клиенты всегда правы.
+                    </p>
+                    <hr class="space s" />
+                    <div class="btn-group social-group btn-group-icons">
+                        <a target="_blank" href="#" data-social="share-facebook"><i class="fa fa-facebook"></i></a>
+                        <a target="_blank" href="#" data-social="share-twitter"><i class="fa fa-twitter"></i></a>
+                        <a target="_blank" href="#" data-social="share-google"><i class="fa fa-instagram"></i></a>
+                        <a target="_blank" href="#" data-social="share-linkedin"><i class="fa fa-youtube"></i></a>
+                    </div>
+                    <div class="col-md-12 copy-text">
+                        © 2022 Бахчай Ресто - Все права защищены. +996 502 121 121 <p>Город Бишкек, Туголбай Ата улица, 40/4 - <a href="https://youtu.be/-wN36SC_lBY">bahchai.kg</a></p>
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+    </div>
+        <link rel="stylesheet" href="{% static 'scripts/iconsmind/line-icons.min.css'%}">
+        <script src="{% static 'scripts/bootstrap/js/bootstrap.min.js'%}"></script>
+        <script src="{% static 'scripts/jquery.tab-accordion.js'%}"></script>
+        <script src="{% static 'scripts/parallax.min.js'%}"></script>
+    </footer>
+</body>
+</html>
